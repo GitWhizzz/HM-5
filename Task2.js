@@ -4,9 +4,6 @@ const students = [
     { name: "Charlie", age: 19, grade: 4.8 }
 ];
 
-function calculateAverageGrade(studentsArray) {
-    const sum = studentsArray.reduce((acc, student) => acc + student.grade, 0);
-    return (sum / studentsArray.length).toFixed(1);
-}
+const calculateAverageGrade = studentsArray => ((studentsArray.reduce((acc, student) => acc + student.grade, 0)) / studentsArray.length).toFixed(1);
 
 console.log(calculateAverageGrade(students)); // 4.4
